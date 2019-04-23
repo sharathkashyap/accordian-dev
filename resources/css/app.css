@@ -1,0 +1,32 @@
+body{
+    background-color: #edf4f9;
+}
+
+.rotate{
+    -webkit-transform: rotate(180deg);  /* Chrome, Safari, Opera */
+        -moz-transform: rotate(180deg);  /* Firefox */
+        -ms-transform: rotate(180deg);  /* IE 9 */
+            transform: rotate(180deg);  /* Standard syntax */    
+}
+.icon{
+    color:#024f9d;
+    float:right;
+} 
+.panel-group .panel+.panel{
+    border-radius: 0px;
+    margin-top: 0px;
+}
+.panel-default>.panel-heading{
+    background-color: #fff;
+}
+.panel-body{
+    background-color: #edf4f9;
+}
+a{
+    color: #333;
+}
+
+a:active, a:hover{
+    text-decoration: none;
+    color: #23527c;
+}
