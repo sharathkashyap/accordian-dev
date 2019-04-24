@@ -8,20 +8,80 @@ body{
         -ms-transform: rotate(180deg);  /* IE 9 */
             transform: rotate(180deg);  /* Standard syntax */    
 }
+P{
+    font-size: 13px;
+}
+.help-header{
+    background: #024f9d;
+    color: #fff;
+    padding: 20px 15px 20px 15px;
+}
+.help-header>h4{
+    margin: 0;
+    padding:0;
+    font-weight: 700;
+}
+.help-header>p{
+    margin: 0;
+    font-weight: 100;
+}
+.info-msg>p{
+    margin: 0;
+    padding: 15px;
+}
 .icon{
     color:#024f9d;
     float:right;
 } 
+.panel{
+    border-radius: 0px !important;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    box-shadow:none !important;
+    
+}
+.panel-default{
+    
+}
 .panel-group .panel+.panel{
     border-radius: 0px;
     margin-top: 0px;
 }
 .panel-default>.panel-heading{
     background-color: #fff;
+    border-radius: 0px !important;
 }
 .panel-body{
     background-color: #edf4f9;
 }
+.panel-interact{
+    text-align: center; 
+    padding: 20px;
+    height: 100px;
+}
+.panel-interact>button{
+    margin: 10px 5px 0px 5px;
+    background-color: #edf4f9;
+    border-color: #edf4f9;
+    width: 80px;
+    color: #024f9d;
+    font-size: 13px;
+    font-weight: 700;
+
+}
+.panel-interact>p{
+    margin: 0px;
+}
+.yes-clicked{
+    padding:10px !important;
+    margin: auto !important;
+    margin-top:10px !important;
+    background: #edf4f9;
+    width: 180px;
+    border-radius: 4px;
+    color:green;
+   }
 a{
     color: #333;
 }
