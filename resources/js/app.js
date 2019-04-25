@@ -19,7 +19,7 @@ $(document).ready(function(){
 //                   console.log($(this).parent().children().splice(-1,1))
            $(this).parent().find('button').hide();
            $(this).parent().find("p").first().hide();
-            $(this).parent().children().last().removeAttr('hidden')
+            $(this).parent().children().last().removeAttr('hidden');
 
         })
     
@@ -27,5 +27,15 @@ $(document).ready(function(){
            console.log("No-Clicked");
            console.log("Question :" , ($(this).parent().parent().parent().find("h4").first().text().trim()) );
            console.log("Answer :" , ($(this).parent().parent().find("p").first().text()) );
+           console.log($(this).parent().parent().find('panel-info'));
+           $(this).parent().hide();
+           $(this).parent().parent().find('.panel-info').removeAttr('hidden');
         })
+    
+        $(".input-text").keypress(function() {
+            if($(this).val().length > 999) {
+                //display your warinig the way you chose
+                console.log('MaxLength Reached');
+           }
+        });
     });
