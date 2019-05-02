@@ -32,11 +32,23 @@ P{
     max-width: 1024px;
     margin: 0 auto;
 }
+@media only screen and (max-width : 1024px) {
+
 .info-msg-send-email>p,.info-msg>p{
     margin: 0;
     padding: 15px;
     max-width: 1024px;
     margin: 0 auto;
+}
+}
+@media only screen and (min-width : 1025px) {
+
+.info-msg-send-email>p,.info-msg>p{
+    margin: 0;
+    padding: 15px 0px;
+    max-width: 1024px;
+    margin: 0 auto;
+}
 }
 .icon{
     color:#024f9d;
@@ -99,6 +111,8 @@ P{
 
 .panel-info{
     text-align: center;
+    max-width: 1024px;
+    margin: 0 auto;
 }
 .panel-info>h6{
     font-weight: 700;
@@ -107,7 +121,7 @@ P{
 }
 
 .input-text{
-    min-width: 90vw;
+    min-width: -webkit-fill-available;
     height: 70px;
     border-radius: 5px;
     box-shadow: none;
@@ -127,6 +141,7 @@ P{
     border-color:  #024f9d;
     margin: 10px 0px 16px 0px;
 }
+@media only screen and (max-width : 1024px) {
 .report-button{
     min-width: 90vw;
     color: #fff;
@@ -136,6 +151,18 @@ P{
     border-style:solid;
     border-color:  #024f9d;
 }
+}
+@media only screen and (min-width : 1025px) {
+.report-button{
+    min-width: 1024px;
+    color: #fff;
+    background: #024f9d;
+    height: 40px;
+    border-radius: 4px;
+    border-style:solid;
+    border-color:  #024f9d;
+}
+}
 .send-email{
     text-align: center;
     padding: 15px;
@@ -143,6 +170,7 @@ P{
 .send-email-form{
     text-align: center;
 }
+
 .send-email-info{
     padding: 10px 15px;
     font-weight: normal;
@@ -150,8 +178,38 @@ P{
     text-align: justify;
     
 }
+@media only screen and (min-width : 1025px) {
+    .send-email-form{
+        max-width: 1025px;
+        margin: auto;
+    }
+    .send-email-info{
+        max-width: 570px;
+        padding: 10px 0px !important;
+        margin: left;
+        float: left;
+}
+   .submit-button{
+    min-width: 150px;
+    float: right;
+    color: #fff;
+    background: #024f9d;
+    border-radius: 0px;
+    border-style:solid;
+    border-color:  #024f9d;
+    margin: 10px 0px 16px 0px;
+    height: 32px;
+}
+    #know-more-form{
+        margin: 15px;
+    }
+    .panel-info{
+        overflow: hidden;
+    }
+
+}
 .input-text-form{
-    min-width: 92vw;
+    min-width: -webkit-fill-available;
     height: 128px;
     border-radius: 5px;
     box-shadow: none;
@@ -162,6 +220,20 @@ P{
     padding-top: 8px;
     margin: 0px 15px;
 }
+
+@media only screen and (min-width : 1025px) {
+    .input-text-form{
+    height: 128px;
+    border-radius: 0px;
+    box-shadow: none;
+    border-width: 1px;
+    border-style:solid;
+    border-color: #c3c3c3;
+    padding-left: 8px;
+    padding-top: 8px;
+    margin: 0px;
+}
+}
 a{
     color: #333;
 }
@@ -169,4 +241,8 @@ a{
 a:active, a:hover{
     text-decoration: none;
     color: #23527c;
+}
+
+@media only screen and (max-width : 1024px) {
+    
 }
