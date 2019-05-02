@@ -17,42 +17,72 @@ $( document ).ready(function() {
     }else{
         jsonUrl="./resources/res/faq-en.json"
     }
-    
-        console.log(jsonUrl);
+
+    console.log(jsonUrl);
     $.getJSON(jsonUrl, function(data) {
         var html ='';
+        html += '<div class="help-header">'
+            +'<h4>'+data.constants.help+'</h4>'
+            +'<p>'+data.constants.faqMsg+'</p>'
+            +'</div>'
+            +'<div class="help-header-send-email" hidden="true">'
+            +'<h4>'+data.constants.reportIssue+'</h4>'
+            +'<p>'+data.constants.explainMsg+'</p>'
+            +'</div>'
+            +'<div class="info-msg">'
+            +'<p>'+data.constants.resolveMsg+'</p>'
+            +'</div>'
+            +'<div class="info-msg-send-email" hidden="true">'
+            + '<p>'+data.constants.tellMoreMsg+'</p>'
+            + '</div>'
+        $('#header').replaceWith(html);
+        html='';
         $.each(data.faqs, function(key, value){
             console.log('value  : ', value, 'key  ', key)
             html += '<div class="panel panel-default">'
-                    +'<a data-toggle="collapse" data-parent="#accordion" href="#collapse'+key+'">'
-                        +'<div class="panel-heading" >'
-                            +'<h4 class="panel-title">'
-                                +value.topic+'<span class="fas fa-chevron-down icon" ></span>'
-                            +'</h4>'
-                        +'</div>'
-                    +'</a>'
-                    +'<div id="collapse'+key+'" class="panel-collapse collapse">'
-                        +'<div class="panel-body">'
-                            +'<p>'+value.description+'</p>'
-                        +'</div>'
-                        +'<div class="panel-interact">'
-                            +'<p>Did this answer help you?</p>'
-                            +'<button type="button" class="btn" id = "btn-no">No</button>'
-                            +'<button type="button" class="btn" style="color: green" id = "btn-yes">Yes</button>'
-                            +'<p class="yes-clicked" hidden="true">Thanks for your response!</p>'
-                        +'</div>'
-                        +'<div class="panel-info" hidden="true">'
-                            +'<h6>Sorry about that!</h6>'
-                            +'<p>What more would you like to know?</p>'
-                            +'<form action="#" id="know-more-form"> '
-                                +'<textarea type="text" name="moreInfo" placeholder="Type here..." class="input-text"  maxlength="1000"></textarea>'
-                                +'<input type="submit" value="Submit" class="submit-button">'
-                            +'</form>'
-                        +'</div>'
-                    +'</div>'
+                +'<a data-toggle="collapse" data-parent="#accordion" href="#collapse'+key+'">'
+                +'<div class="panel-heading" >'
+                +'<h4 class="panel-title">'
+                +value.topic+'<span class="fas fa-chevron-down icon" ></span>'
+                +'</h4>'
+                +'</div>'
+                +'</a>'
+                +'<div id="collapse'+key+'" class="panel-collapse collapse">'
+                +'<div class="panel-body">'
+                +'<p>'+value.description+'</p>'
+                +'</div>'
+                +'<div class="panel-interact">'
+                +'<p>'+data.constants.helpMsg+'</p>'
+                +'<button type="button" class="btn" id = "btn-no">'+data.constants.noMsg+'</button>'
+                +'<button type="button" class="btn" style="color: green" id = "btn-yes">'+data.constants.yesMsg+'</button>'
+                +'<p class="yes-clicked" hidden="true">'+data.constants.thanksMsg+'</p>'
+                +'</div>'
+                +'<div class="panel-info" hidden="true">'
+                +'<h6>'+data.constants.sorryMsg+'</h6>'
+                +'<p>'+data.constants.knowMoreMsg+'</p>'
+                +'<form action="#" id="know-more-form"> '
+                +'<textarea type="text" name="moreInfo" placeholder="'+data.constants.typeHere+'" class="input-text"  maxlength="1000"></textarea>'
+                +'<input type="submit" value="'+data.constants.submitButton+'" class="submit-button">'
+                +'</form>'
+                +'<p class="no-clicked" hidden="true">'+data.constants.thanksMsg+'</p>'
+                +'</div>'
+                +'</div>'
                 +'</div>'
         });
         $('#accordion').html(html);
+        html='';
+
+        html += '<div class="send-email">'
+            +'<button class="report-button"><span class="far fa-comment-alt"></span> '+data.constants.reportIssueMsg+'</button>'
+            +'</div>'
+            +'<div class = "send-email-form" hidden="true">'
+            +'<form action="#" id ="send-email-form"> '
+            +'<textarea type="text" name="moreInfo" placeholder="'+data.constants.typeHere+'" class="input-text-form" maxlength="1000"></textarea>'
+                +'<p class = "send-email-info">'+data.constants.triggerEmailMsg+'</p>'
+                +'<input type="submit" value="'+data.constants.initiateEmailButton+'" class="submit-button">'
+                +'</form>'
+                +'</div>'
+        $('#send-email').replaceWith(html);
     })
 });
 
