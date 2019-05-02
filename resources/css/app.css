@@ -8,6 +8,9 @@ body{
         -ms-transform: rotate(180deg);  /* IE 9 */
             transform: rotate(180deg);  /* Standard syntax */    
 }
+.btn-arrow{
+    float: right;
+}
 P{
     font-size: 13px;
 }

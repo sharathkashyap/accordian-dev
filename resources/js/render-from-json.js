@@ -43,7 +43,7 @@ $( document ).ready(function() {
                 +'<a data-toggle="collapse" data-parent="#accordion" href="#collapse'+key+'">'
                 +'<div class="panel-heading" >'
                 +'<h4 class="panel-title">'
-                +value.topic+'<span class="fas fa-chevron-down icon" ></span>'
+                +value.topic+'<img src="./resources/images/Arrow.png" class="btn-arrow">'
                 +'</h4>'
                 +'</div>'
                 +'</a>'
@@ -73,7 +73,7 @@ $( document ).ready(function() {
         html='';
 
         html += '<div class="send-email">'
-            +'<button class="report-button"><span class="far fa-comment-alt"></span> '+data.constants.reportIssueMsg+'</button>'
+            +'<button class="report-button"><img src="./resources/images/Report.png"></span> '+data.constants.reportIssueMsg+'</button>'
             +'</div>'
             +'<div class = "send-email-form" hidden="true">'
             +'<form action="#" id ="send-email-form"> '
