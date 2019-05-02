@@ -61,8 +61,11 @@ $(document).ready(function(){
             window.parent.postMessage(value,"*");
             console.log(value);
         }
-                $(this).parent().children().last().removeAttr('hidden');
-//                $(this).parent().children().not('select').hide();
+        $(this).parent().children().last().removeAttr('hidden');
+        $(this).parent().css("padding", "20px");                
+        $(this).parent().css("height", "100px");
+        $(this).parent().children().last().removeAttr('hidden');
+        $(this).parent().children().not('.no-clicked').hide();
 
 
     });
@@ -76,7 +79,7 @@ $(document).ready(function(){
         parent.find('.bs-example').hide();
         parent.find('.info-msg').hide();
         parent.find('.help-header').hide();
-                parent.find('.help-header-send-email').removeAttr('hidden');
+        parent.find('.help-header-send-email').removeAttr('hidden');
         parent.find('.info-msg-send-email').removeAttr('hidden');
         parent.find('.send-email-form').removeAttr('hidden');
     });
